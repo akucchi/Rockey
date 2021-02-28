@@ -28,5 +28,4 @@ Then run `yarn start` to start the app.
 
 1. AutoHotKey must be installed in its default directory: _C:\Program Files\AutoHotkey\AutoHotkey.exe_.
 2. ShadowPlay recording has to be stopped before pressing "Start".
-3. Game must be paused before pressing "Start".
-4. File name must be a valid Windows file name.
+3. File name must be a valid Windows file name.

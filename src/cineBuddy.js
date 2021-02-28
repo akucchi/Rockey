@@ -23,7 +23,7 @@ class CineBuddy {
 
     async startRecord() {
         await sleep(20); 
-        //sleep for 20 ms so the recordings are synced and shadowplay doesn't shit itself
+        // Sleep for 20 ms so the recordings are synced and ShadowPlay doesn't shit itself
         this.client.send('cbStartRecord');
     }
 
