@@ -16,11 +16,20 @@
         </button>
     </div>
     <script>
+        const {ipcRenderer} = require("electron")
         let recording = false;
         let button = document.querySelector(".button")
+        let cineBuddy = document.querySelector('input[name = "cineBuddy"]')
+        let shadowPlay = document.querySelector('input[name = "shadowPlay"]')
         button.addEventListener("click", ()=>{
             recording = !recording;
             button.innerText = recording ? "Stop" : "Start";
+            let args = {
+                recording,
+                cineBuddy: cineBuddy.checked,
+                shadowPlay: shadowPlay.checked
+            }
+            ipcRenderer.invoke("toggle", args);
         });
     </script>
 </body>

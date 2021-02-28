@@ -1,5 +1,6 @@
-const { app, BrowserWindow } = require('electron');
-
+const { app, BrowserWindow, ipcMain } = require('electron');
+const { ShadowPlay } = require('./shadowPlay.js')
+const { CineBuddy } = require('./cineBuddy.js')
 const createWindow = () => {
     const window = new BrowserWindow({
         width: 800,
@@ -25,3 +26,21 @@ app.on('activate', () => {
         createWindow();
     }
 });
+
+let cinebuddy = new CineBuddy();
+cinebuddy.connect()
+
+ipcMain.handle('toggle', (event, args) => {
+    if (args.cineBuddy) {
+        const command = args.recording;
+        if (!command) { 
+            cinebuddy.setName('bajojajotemp');
+            cinebuddy.startRecord();
+        } else {
+            cinebuddy.stopRecord();
+        }
+    }
+    if (args.shadowPlay) {
+        new ShadowPlay().toggle(); 
+    }
+})
