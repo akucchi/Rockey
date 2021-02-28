@@ -1,4 +1,4 @@
-import WebSocket from "ws";
+const WebSocket = require('ws');
 
 const BAKKESMOD_SERVER = 'ws://127.0.0.1:9002';
 const RCON_PASSWORD = 'password';
@@ -31,4 +31,4 @@ class CineBuddy {
     }
 }
 
-export default CineBuddy;
+module.exports = CineBuddy;

@@ -21,9 +21,11 @@ cbStartRecord
 cbStopRecord
 ```
 
-Then run `yarn record <file-name>` to start recording and `yarn stop` to stop current recording.
+Then run `yarn start` to start the app.
 
 ## Troubleshooting
 
 1. AutoHotKey must be installed in its default directory: _C:\Program Files\AutoHotkey\AutoHotkey.exe_.
 2. ShadowPlay recording has to be stopped before running `record`.
+3. Game must be paused before record.
+4. File name must be a valid Windows file name.

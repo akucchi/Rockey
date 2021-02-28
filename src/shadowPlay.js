@@ -1,5 +1,5 @@
-import fs from 'fs';
-import { spawn } from 'child_process';
+const fs = require('fs');
+const { spawn } = require('child_process');
 
 function runCommand(command, args, options = undefined) {
     const spawned = spawn(command, args, options);
@@ -8,11 +8,11 @@ function runCommand(command, args, options = undefined) {
         spawned.stdout.on('data', (data) => {
             console.log(data.toString());
         });
-    
+
         spawned.stderr.on('data', (data) => {
             console.error(data.toString());
         });
-    
+
         spawned.on('close', () => {
             resolve();
         });
@@ -21,8 +21,7 @@ function runCommand(command, args, options = undefined) {
 
 class ShadowPlay {
     constructor() {
-        const __dirname = fs.realpathSync('.');
-        this.script = __dirname + '\\src\\toggleRecord.ahk';
+        this.script = __dirname + '\\toggleRecord.ahk';
     }
 
     toggle() {
@@ -30,4 +29,4 @@ class ShadowPlay {
     }
 }
 
-export default ShadowPlay;
+module.exports = ShadowPlay;
