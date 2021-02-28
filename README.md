@@ -9,6 +9,7 @@ Record Cinematics Buddy animation and video through ShadowPlay at the same time
 - Cinematics Buddy
 - AutoHotKey
 - Node.js
+- Electron
 
 ## Usage
 
