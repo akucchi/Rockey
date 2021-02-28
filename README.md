@@ -21,4 +21,9 @@ cbStartRecord
 cbStopRecord
 ```
 
-Then run `yarn record <file-name>` to start recording and `yarn stop <file-name>`.
+Then run `yarn record <file-name>` to start recording and `yarn stop` to stop current recording.
+
+## Troubleshooting
+
+1. AutoHotKey must be installed in its default directory: _C:\Program Files\AutoHotkey\AutoHotkey.exe_.
+2. ShadowPlay recording has to be stopped before running `record`.
