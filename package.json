@@ -1,0 +1,9 @@
+{
+  "name": "rockey",
+  "version": "1.0.0",
+  "description": "Record Cinematics Buddy animation and video through ShadowPlay at the same time",
+  "main": "src/index.js",
+  "repository": "https://github.com/akucchi/Rockey.git",
+  "author": "aku",
+  "license": "MIT"
+}
