@@ -22,7 +22,7 @@ function runCommand(command, args, options = undefined) {
 class ShadowPlay {
     constructor() {
         const __dirname = fs.realpathSync('.');
-        this.script = __dirname + '\\src\\bajojajo.ahk';
+        this.script = __dirname + '\\src\\toggleRecord.ahk';
     }
 
     toggle() {
