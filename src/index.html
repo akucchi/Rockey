@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rockey</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <div>
+    <ul>
+    <li>
         <input type="checkbox" class="checkbox" name="cineBuddy">
         <label for="cineBuddy">Cinematics Buddy</label>
+    </li>
+    <li>
         <input type="checkbox" class="checkbox" name="shadowPlay">
         <label for="cineBuddy">Nvidia ShadowPlay</label>
+    </li>
+    <li>
         <button class="button">
             Start
         </button>
-    </div>
+    </li>
+    </ul>
     <script>
         const {ipcRenderer} = require("electron")
         let recording = false;
