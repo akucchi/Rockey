@@ -8,6 +8,10 @@
   "author": "aku",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js"
+    "record": "node src/index.js record",
+    "stop": "node src/index.js stop"
+  },
+  "dependencies": {
+    "ws": "^7.4.3"
   }
 }
