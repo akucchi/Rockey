@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# bajojajo different package managers
+package-lock.json
