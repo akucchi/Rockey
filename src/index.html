@@ -6,11 +6,22 @@
     <title>Rockey</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
-    <p>
-        We are using node <script>document.write(process.versions.node)</script>,
-        Chrome <script>document.write(process.versions.chrome)</script>,
-        and Electron <script>document.write(process.versions.electron)</script>.
-    </p>
+    <div>
+        <input type="checkbox" class="checkbox" name="cineBuddy">
+        <label for="cineBuddy">Cinematics Buddy</label>
+        <input type="checkbox" class="checkbox" name="shadowPlay">
+        <label for="cineBuddy">Nvidia ShadowPlay</label>
+        <button class="button">
+            Start
+        </button>
+    </div>
+    <script>
+        let recording = false;
+        let button = document.querySelector(".button")
+        button.addEventListener("click", ()=>{
+            recording = !recording;
+            button.innerText = recording ? "Stop" : "Start";
+        });
+    </script>
 </body>
 </html>
